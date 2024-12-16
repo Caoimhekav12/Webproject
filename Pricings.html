@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Pricings" content="Luxe Glamour Service Pricings">
+    <title>Pricings</title>
+    <link rel="stylesheet" href="jp.css">
+
+</head>
+<body>
+    <div class="Pricings-ban">
+    	<div class="Pricings-head">
+    		<h1>Pricings</h1>
+    	</div>
+    </div>
+
+
+ <div class="price-ban">
+ <div class="price-sen">
+ 	<p>Our 45 minute consultations are priced at 65 euro.<br>Please contact us if you are looking for prices regarding the select jewellery pieces we have in-store.</p>
+ </div>
+</div>
+
+<form>
+	<table>
+		<tr>
+			<th>Contact Form</th>
+			<th>All required</th>
+		</tr>
+		<tr>
+			<td>First Name</td>
+			<td>
+				<input type="text" name="fname">
+			</td>
+		</tr>
+		<tr>
+			<td>Last Name</td>
+			<td>
+				<input type="text" name="lname">
+			</td>
+		</tr>
+		<tr>
+			<td>Contact number</td>
+	        <td>
+	        	<input type="text" name="contactno">
+	        </td>
+	       </tr>
+	       <tr>
+	       	<td>Message</td>
+	       	<td>
+	       		<input type="text" placeholder="Type your query" name="message">
+	       	</td>
+	     </tr>
+	 </table>
+	 <input type="submit" value="Submit" onclick="showAlert('Thank you, your details has been submitted!')">
+	</form>
+
+<script>
+	function showAlert(message){
+		alert (message)
+	}
+
+</script>
+
+<div class="booking-ban">
+<div class="booking-sen">
+	<p>We are located on the bottom floor of 'Arnott's' Department Store on Henry Street. <br>We take bookings but also accept walk-ins for our services. <br>Please call (01 860 3775) to book your consultation and avoid disappointment.</p>
+</div>
+</div>
+
+<div id="map"></div>
+
+<script>
+	function initMap() {
+		const position = { lat: 53.34916011234208, lng: -6.263155646636806};
+
+		const map = new google.maps.Map(document.getElementById("map"), {
+			zoom: 17,
+			center: position,
+		});
+
+		const marker = new google.maps.Marker ({
+			position: position,
+			map: map,
+			title: "Our Location",
+
+		});
+
+	}
+</script>
+
+<script
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0qJ0drS0_4z9ydcADL2PKtobxRSsThrY&callback=initMap"
+	defer
+	></script>
+
+
+
+</body> 
+</html>
